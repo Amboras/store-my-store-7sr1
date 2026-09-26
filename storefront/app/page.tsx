@@ -47,7 +47,7 @@ export default function HomePage() {
   return (
     <>
       <section className="overflow-hidden border-b border-border bg-background">
-        <div className="container-custom grid min-h-[calc(100svh-4rem)] items-center gap-12 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:py-16">
+        <div className="container-custom grid gap-12 py-16 lg:min-h-[700px] lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-12">
           <div className="relative z-10 max-w-xl py-8 lg:py-14">
             <p className="mb-7 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               <PawPrint className="h-4 w-4" aria-hidden="true" />
