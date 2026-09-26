@@ -1,10 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Lato, Inter } from 'next/font/google'
+import { Bitter, Figtree } from 'next/font/google'
 import { Providers } from './providers'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
-import AnnouncementBar from '@/components/layout/announcement-bar'
 import { AnalyticsProvider } from '@/components/analytics-provider'
 import { MetaPixelProvider } from '@/components/meta-pixel-provider'
 import { Toaster } from 'sonner'
@@ -14,14 +13,14 @@ import dynamic from 'next/dynamic'
 
 const CookieConsent = dynamic(() => import('@/components/cookie-consent'))
 
-const heading = Lato({
+const heading = Bitter({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['500', '600'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const body = Inter({
+const body = Figtree({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-body',
@@ -30,10 +29,10 @@ const body = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Store — Modern Commerce',
-    template: '%s | Store',
+    default: 'My Store — Better mealtimes for pets',
+    template: '%s | My Store',
   },
-  description: 'Discover curated products crafted with care. A modern ecommerce experience.',
+  description: 'Thoughtful pet essentials for easier everyday routines.',
 }
 
 export default function RootLayout({
@@ -79,7 +78,6 @@ export default function RootLayout({
       <body>
         <Providers>
           <ElementPickerListener />
-          <AnnouncementBar />
           <Header />
           <main className="min-h-screen">
             <ErrorBoundary>
